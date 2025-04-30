@@ -13,6 +13,7 @@ import java.util.List;
 public class HomeController extends BaseController{
     @Autowired
     private HockeyPlayerRepository hockeyPlayerRepository;
+
     @GetMapping("/")
     public String home(Model model) {
 
