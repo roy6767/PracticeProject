@@ -18,7 +18,7 @@ public class HomeController extends BaseController{
     public String home(Model model) {
 
         model.addAttribute("players", hockeyPlayerRepository.findAll());
-        model.addAttribute("user","Stefan");
+        model.addAttribute("user","Biplob");
         return "home";
     }
     @GetMapping("/profile")
