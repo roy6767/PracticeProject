@@ -13,31 +13,27 @@ public class ConsoleRunner implements CommandLineRunner {
     HockeyPlayerRepository hockeyPlayerRepository;
 
     @Override
-    public void run(String... args) throws Exception{
-        if(hockeyPlayerRepository.count() == 0) {
+    public void run(String... args) throws Exception {
+        if (hockeyPlayerRepository.count() == 0) {
             HockeyPlayer hockeyPlayer = new HockeyPlayer();
             hockeyPlayer.setAge(52);
             hockeyPlayer.setName("Stefan");
             hockeyPlayerRepository.save(hockeyPlayer);
 
             HockeyPlayer hockeyPlayer1 = new HockeyPlayer();
-            hockeyPlayer.setAge(35);
-            hockeyPlayer.setName("Elijah");
-            hockeyPlayerRepository.save(hockeyPlayer);
+            hockeyPlayer1.setAge(35);
+            hockeyPlayer1.setName("Elijah");
+            hockeyPlayerRepository.save(hockeyPlayer1);
 
             HockeyPlayer hockeyPlayer2 = new HockeyPlayer();
-            hockeyPlayer.setAge(33);
-            hockeyPlayer.setName("Biplob");
-            hockeyPlayerRepository.save(hockeyPlayer);
+            hockeyPlayer2.setAge(33);
+            hockeyPlayer2.setName("Biplob");
+            hockeyPlayerRepository.save(hockeyPlayer2);
 
             HockeyPlayer hockeyPlayer3 = new HockeyPlayer();
-            hockeyPlayer.setAge(33);
-            hockeyPlayer.setName("Bithun");
-            hockeyPlayerRepository.save(hockeyPlayer);
+            hockeyPlayer3.setAge(33);
+            hockeyPlayer3.setName("Bithun");
+            hockeyPlayerRepository.save(hockeyPlayer3);
         }
     }
-
-
-
-
 }

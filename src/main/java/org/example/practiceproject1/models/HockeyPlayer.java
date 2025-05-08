@@ -15,6 +15,9 @@ public class HockeyPlayer {
     @Column(name="Age")
     private int age;
 
+    public HockeyPlayer() {
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
