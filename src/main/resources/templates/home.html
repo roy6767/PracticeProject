@@ -6,11 +6,9 @@
 </head>
 <body>
 <h1>Jensen Hockey Stars.</h1>
-<br>
 <h2>Players XI</h2>
-<hr>
 <h2> Top Scorer of the week: </h2>
-<h2 th:text="+${user}"> </h2>
+<h2 th:text="${user}"> </h2>
 <br>
 <div th:each="onePlayer: ${players}">
 
