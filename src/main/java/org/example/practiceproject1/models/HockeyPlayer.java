@@ -15,6 +15,9 @@ public class HockeyPlayer {
     @Column(name="Age")
     private int age;
 
+    @Column(name="GoalsScored")
+    private int goalsScored;
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -38,4 +41,8 @@ public class HockeyPlayer {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public int getGoalsScored() { return goalsScored; }
+
+    public void setGoalsScored(int goalsScored) {this.goalsScored = goalsScored;}
 }

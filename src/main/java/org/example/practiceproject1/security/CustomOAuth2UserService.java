@@ -33,28 +33,20 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
             return oauth2User;
         }
 
-
         String primaryEmailAddress = extractPrimaryEmailAddress(
                 oauth2User,
                 userRequest.getAccessToken().getTokenValue());
 
-        // return oauth2User if primaryEmailAddress is null
-        // alternative: Throw exception
         if (primaryEmailAddress == null) {
             return oauth2User;
         }
 
-        // insert your createUser code here
-
-        // Clone the original attributes into a mutable map
         Map<String, Object> updatedAttributes = new HashMap<>(oauth2User.getAttributes());
 
-        // Add the fetched email to the attributes map
         updatedAttributes.put(EMAIL_KEY, primaryEmailAddress);
 
-        // Return a new DefaultOAuth2User with the updated attributes
         return new DefaultOAuth2User(
-                oauth2User.getAuthorities(), // or Collections.emptyList()
+                oauth2User.getAuthorities(),
                 updatedAttributes,
                 NAME_ATTRIBUTE);
     }

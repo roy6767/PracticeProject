@@ -22,7 +22,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(request -> request
-                .requestMatchers("/","/css/**","/js/**","/images/**", "/api/v1/auth/**", "/login/**", "oauth_login*", "/oauth2/authorization/**","/logout/**").permitAll()
+                .requestMatchers("/","/css/**","/js/**","/images/**", "/api/v1/auth/**", "/login/**", "oauth_login*", "/oauth2/authorization/**").permitAll()
                 .anyRequest().authenticated());
         http.csrf(AbstractHttpConfigurer::disable)
                 .cors(AbstractHttpConfigurer::disable)

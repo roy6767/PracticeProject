@@ -18,11 +18,37 @@ public class ConsoleRunner implements CommandLineRunner {
             HockeyPlayer hockeyPlayer = new HockeyPlayer();
             hockeyPlayer.setAge(52);
             hockeyPlayer.setName("Stefan");
+            hockeyPlayer.setGoalsScored(10);
+            hockeyPlayerRepository.save(hockeyPlayer);
+
+            hockeyPlayer = new HockeyPlayer();
+            hockeyPlayer.setAge(35);
+            hockeyPlayer.setName("Elijah");
+            hockeyPlayer.setGoalsScored(6);
+            hockeyPlayerRepository.save(hockeyPlayer);
+
+            hockeyPlayer = new HockeyPlayer();
+            hockeyPlayer.setAge(25);
+            hockeyPlayer.setName("Mohammad");
+            hockeyPlayer.setGoalsScored(6);
+            hockeyPlayerRepository.save(hockeyPlayer);
+
+            hockeyPlayer = new HockeyPlayer();
+            hockeyPlayer.setAge(25);
+            hockeyPlayer.setName("Edu");
+            hockeyPlayer.setGoalsScored(7);
             hockeyPlayerRepository.save(hockeyPlayer);
 
             hockeyPlayer = new HockeyPlayer();
             hockeyPlayer.setAge(33);
             hockeyPlayer.setName("Biplob");
+            hockeyPlayer.setGoalsScored(2);
+            hockeyPlayerRepository.save(hockeyPlayer);
+
+            hockeyPlayer = new HockeyPlayer();
+            hockeyPlayer.setAge(33);
+            hockeyPlayer.setName("Bithun");
+            hockeyPlayer.setGoalsScored(6);
             hockeyPlayerRepository.save(hockeyPlayer);
         }
     }

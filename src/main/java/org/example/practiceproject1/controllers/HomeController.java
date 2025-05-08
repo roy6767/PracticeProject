@@ -19,7 +19,7 @@ public class HomeController extends BaseController{
     public String home(Model model) {
 
         model.addAttribute("players", hockeyPlayerRepository.findAll());
-        model.addAttribute("user","Biplob");
+        model.addAttribute("user","Stefan");
         return "home";
     }
     @GetMapping("/profile")
@@ -27,10 +27,5 @@ public class HomeController extends BaseController{
         String user =getLoggedInEmail();
         model.addAttribute("user",user);
         return "profile";
-    }
-    @GetMapping("/logout")
-    public String logout() {
-        SecurityContextHolder.clearContext();
-        return "redirect:/";
     }
 }
